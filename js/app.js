@@ -21,15 +21,11 @@ const addTask = (event) => {
   const div = document.createElement('div');
   div.className = 'thing-todo__desc';
 
-  //Creating <i> element that hold the delete icon.
-  const del = document.createElement('i');
-  del.className = 'material-icons';
-  del.innerHTML = 'delete_forever';
-
   //Creating <button> element that hold <i> element of delete icon.
   const button = document.createElement('button');
-  button.className = 'thing-todo__del';
+  button.className = 'thing-todo__del material-icons';
   button.type = 'button';
+  button.innerHTML = 'delete_forever';
 
   //Creating <li> element that hold the <div> and <button>.
   const li = document.createElement('li');
@@ -38,7 +34,6 @@ const addTask = (event) => {
   div.appendChild(p);       // Appending <p> to <div>.
   div.appendChild(i);       // Appending <i> to <div>.
   li.appendChild(div);      // Appending <div> to <li>.
-  button.appendChild(del);  // Appending <i> to <button>.
   li.appendChild(button);   // Appending <button> to <li>.
   taskList.appendChild(li); // Appending <li> to <ul>.
 
